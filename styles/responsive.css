@@ -1,0 +1,124 @@
+/* Mobile First Approach */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background: #2c3e50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* About Page */
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    /* General Layout */
+    .features, .team-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .hero, .about-hero, .contact-hero {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Navigation */
+    .nav-links {
+        width: 60%;
+    }
+
+    /* Layout Adjustments */
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    /* About Page */
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    /* Contact Page */
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    .contact-info {
+        width: 35%;
+    }
+}
+
+/* Animation for burger menu */
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Form Error States */
+.error {
+    border: 1px solid #e74c3c !important;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    height: 20px;
+    display: block;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
